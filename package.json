@@ -1,0 +1,20 @@
+{
+  "name": "media-server-notifier",
+  "version": "1.0.0",
+  "description": "An express server to send discord notification relating to a home media server",
+  "homepage": "https://github.com/Ddxh2/media-server-notifier#readme",
+  "bugs": {
+    "url": "https://github.com/Ddxh2/media-server-notifier/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ddxh2/media-server-notifier.git"
+  },
+  "license": "ISC",
+  "author": "Danny He",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  }
+}
