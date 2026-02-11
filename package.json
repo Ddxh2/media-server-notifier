@@ -1,6 +1,7 @@
 {
   "name": "media-server-notifier",
   "version": "1.0.0",
+  "type": "module",
   "description": "An express server to send discord notification relating to a home media server",
   "homepage": "https://github.com/Ddxh2/media-server-notifier#readme",
   "bugs": {
@@ -12,9 +13,14 @@
   },
   "license": "ISC",
   "author": "Danny He",
-  "type": "commonjs",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/index.js",
     "test": "test"
+  },
+  "dependencies": {
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1"
   }
 }
