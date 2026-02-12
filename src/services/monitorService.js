@@ -1,7 +1,10 @@
 import { ping } from "../utils/ping.js";
 
 export const monitorAddresses = async () => {
-  const pingTimeout = 1000;
+  const pingTimeout =
+    typeof process.env.PING_TIMEOUT === "string"
+      ? parseInt(process.env.PING_TIMEOUT)
+      : process.env.PING_TIMEOUT;
   const addresses = process.env.ADDRESSES_TO_MONITOR.split(",");
   const pings = await Promise.all(
     addresses.map((address) => ping(address, pingTimeout)),
