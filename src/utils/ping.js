@@ -6,13 +6,9 @@ export const ping = (address, timeout) => {
     let currentAttempt = 0;
     while (currentAttempt < maxAttempts) {
       try {
-        const response = await fetch(address);
-        if (response.ok) {
-          currentAttempt = maxAttempts;
-          resolve(true);
-        } else {
-          throw new Error();
-        }
+        await fetch(address);
+        currentAttempt = maxAttempts;
+        resolve(true);
       } catch (error) {
         await new Promise((r) => {
           setTimeout(r, interval);
